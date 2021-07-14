@@ -97,6 +97,7 @@ body {
     "description      description         description"
     "agentDisplay     roleName            roleIcon"
     "agentDisplay     roleDescription     roleDescription"
+    "ability          ability             ability"
     "ability-1        ability-1           ability-1"
     "ability-2        ability-2           ability-2"
     "ability-3        ability-3           ability-3"
@@ -164,22 +165,28 @@ body {
   align-items: center;
 }
 
+.ability {
+  grid-area: ability;
+  display: flex;
+  justify-content: center;
+}
+
 .abilityContainer {
   display: grid;
   grid-template-areas: "abilityIcon abilityTitle abilityDescription";
   gap: 1rem;
 }
 
-.abilityContainer:nth-of-type(7) {
+.abilityContainer:nth-of-type(8) {
   grid-area: ability-1;
 }
-.abilityContainer:nth-of-type(8) {
+.abilityContainer:nth-of-type(9) {
   grid-area: ability-2;
 }
-.abilityContainer:nth-of-type(9) {
+.abilityContainer:nth-of-type(10) {
   grid-area: ability-3;
 }
-.abilityContainer:nth-of-type(10) {
+.abilityContainer:nth-of-type(11) {
   grid-area: ability-4;
 }
 

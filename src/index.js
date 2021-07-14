@@ -1,7 +1,7 @@
 let agentUuid = {
   breach: "5f8d3a7f-467b-97f3-062c-13acf203c006",
   raze: "f94c3b30-42be-e959-889c-5aa313dba261",
-  kAYO: "601dbbe7-43ce-be57-2a40-4abd24953621",
+  kayo: "601dbbe7-43ce-be57-2a40-4abd24953621",
   skye: "6f2a04ca-43e0-be17-7f36-b3908627744d",
   cypher: "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
   sova: "ded3520f-4264-bfed-162d-b080e2abccf9",
@@ -49,13 +49,13 @@ displayResponse = (responseJSON) => {
   agentChild[3].children[0].src = responseOBJ.data.role.displayIcon;
   agentChild[4].textContent = responseOBJ.data.role.description;
   agentChild[5].textContent = responseOBJ.data.description;
-  for (i = 6; i < 10; i++) {
+  for (i = 7; i < 11; i++) {
     agentChild[i].children[0].children[0].src =
-      responseOBJ.data.abilities[i - 6].displayIcon;
+      responseOBJ.data.abilities[i - 7].displayIcon;
     agentChild[i].children[1].textContent =
-      responseOBJ.data.abilities[i - 6].displayName;
+      responseOBJ.data.abilities[i - 7].displayName;
     agentChild[i].children[2].textContent =
-      responseOBJ.data.abilities[i - 6].description;
+      responseOBJ.data.abilities[i - 7].description;
   }
 };
 
