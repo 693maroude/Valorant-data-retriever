@@ -9,7 +9,6 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: 1.6;
 }
 
 body {
@@ -17,7 +16,8 @@ body {
   height: 100%;
   margin: 5rem;
   display: grid;
-  grid-template-areas: "form" "output";
+  grid-template-areas: "form" "agent-container";
+  row-gap: 3rem;
 }
 
 .form {
@@ -88,6 +88,123 @@ body {
   transform: scale(0.95);
 }
 
-.output {
-  grid-area: output;
+.agent-container {
+  grid-area: agent-container;
+  display: none;
+  grid-template-columns: auto 3fr 1fr;
+  grid-template-areas:
+    "displayName      displayName         displayName"
+    "description      description         description"
+    "agentDisplay     roleName            roleIcon"
+    "agentDisplay     roleDescription     roleDescription"
+    "ability-1        ability-1           ability-1"
+    "ability-2        ability-2           ability-2"
+    "ability-3        ability-3           ability-3"
+    "ability-4        ability-4           ability-4";
+  gap: 1rem;
+}
+
+.agent-item {
+  font-family: var(--font);
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  background: transparent;
+  border: 0.2rem solid var(--color-primary);
+  padding: 4rem;
+}
+
+.displayName {
+  grid-area: displayName;
+  font-size: 2rem;
+}
+
+.description {
+  grid-area: description;
+  text-align: justify;
+
+  display: flex;
+  align-items: center;
+}
+
+.agentDisplay {
+  padding: 0;
+  grid-area: agentDisplay;
+  display: flex;
+}
+
+.agentDisplay img {
+  max-width: 35rem;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.roleIcon {
+  grid-area: roleIcon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roleIcon img {
+  object-fit: fill;
+}
+
+.roleName {
+  grid-area: roleName;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.roleDescription {
+  grid-area: roleDescription;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+}
+
+.abilityContainer {
+  display: grid;
+  grid-template-areas: "abilityIcon abilityTitle abilityDescription";
+  gap: 1rem;
+}
+
+.abilityContainer:nth-of-type(7) {
+  grid-area: ability-1;
+}
+.abilityContainer:nth-of-type(8) {
+  grid-area: ability-2;
+}
+.abilityContainer:nth-of-type(9) {
+  grid-area: ability-3;
+}
+.abilityContainer:nth-of-type(10) {
+  grid-area: ability-4;
+}
+
+.abilityIcon {
+  grid-area: abilityIcon;
+  display: flex;
+  align-items: center;
+}
+
+.abilityIcon img {
+  object-fit: none;
+}
+
+.abilityTitle {
+  grid-area: abilityTitle;
+  writing-mode: vertical-rl;
+  /* text-orientation: upright; */
+  text-align: center;
+  transform: rotateZ(180deg);
+}
+
+.abilityDescription {
+  grid-area: abilityDescription;
+  text-align: justify;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
 }

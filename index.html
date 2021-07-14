@@ -10,16 +10,69 @@
   </head>
   <body>
     <section class="form">
-      <label for="queryInput" id="inputLabel" class="input-placeholder">Your Query here . . .</label>
+      <label for="queryInput" id="inputLabel" class="input-placeholder"
+        >Enter agent name here . .</label
+      >
       <input
         type="text"
         name="queryInput"
         id="queryInput"
         class="input-field"
       />
-      <button class="btn" id="sendRequest" onclick="btnClicked(this)">Send Request</button>
+      <button class="btn" id="sendRequest" onclick="btnClicked(this)">
+        Send Request
+      </button>
     </section>
-    <section class="output"></div>
+
+    <div class="agent-container" id="agentContainer">
+      <div class="agent-item displayName"></div>
+
+      <div class="agent-item agentDisplay">
+        <img src="" />
+      </div>
+
+      <div class="agent-item roleName"></div>
+
+      <div class="agent-item roleIcon">
+        <img src="" />
+      </div>
+
+      <div class="agent-item roleDescription"></div>
+
+      <div class="agent-item description"></div>
+
+      <div class="abilityContainer">
+        <div class="agent-item abilityIcon">
+          <img src="" />
+        </div>
+        <div class="agent-item abilityTitle"></div>
+        <div class="agent-item abilityDescription"></div>
+      </div>
+
+      <div class="abilityContainer">
+        <div class="agent-item abilityIcon">
+          <img src="" />
+        </div>
+        <div class="agent-item abilityTitle"></div>
+        <div class="agent-item abilityDescription"></div>
+      </div>
+
+      <div class="abilityContainer">
+        <div class="agent-item abilityIcon">
+          <img src="" />
+        </div>
+        <div class="agent-item abilityTitle"></div>
+        <div class="agent-item abilityDescription"></div>
+      </div>
+
+      <div class="abilityContainer">
+        <div class="agent-item abilityIcon">
+          <img src="" />
+        </div>
+        <div class="agent-item abilityTitle"></div>
+        <div class="agent-item abilityDescription"></div>
+      </div>
+    </div>
 
     <script src="./src/index.js"></script>
   </body>
