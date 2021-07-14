@@ -15,7 +15,7 @@
 body {
   background-color: var(--color-secondary);
   height: 100%;
-  margin: 5rem 5rem;
+  margin: 5rem;
   display: grid;
   grid-template-areas: "form" "output";
 }
@@ -76,7 +76,6 @@ body {
   flex: 1 1 30%;
   box-sizing: border-box;
   cursor: pointer;
-  transition: border-width 0.2s, box-shadow 0.1s 0.1s;
 }
 
 .btn:hover,
@@ -86,9 +85,7 @@ body {
 }
 
 .btn:active {
-  border-width: 0.4rem;
-  box-shadow: 0 0 0 0.4rem var(--color-secondary) inset;
-  transition: all 0s;
+  transform: scale(0.95);
 }
 
 .output {
