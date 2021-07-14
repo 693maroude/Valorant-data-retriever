@@ -28,7 +28,7 @@ displayResponse = (responseJSON) => {
 request = () => {
   const xhr = new XMLHttpRequest();
 
-  xhr.open("GET", "https://valorant-api.com/v1/weapons", true);
+  xhr.open("GET", "", true);
 
   xhr.onprogress = function () {
     console.log("on progress");

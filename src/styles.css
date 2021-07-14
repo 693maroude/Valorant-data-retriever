@@ -44,8 +44,7 @@ body {
 
 .input-label,
 .form:focus-within .input-placeholder {
-  font-size: 1.6rem;
-  transform: translate(0, 0);
+  transform: translate(3ch, 0) scale(1.1, 1.1);
 }
 
 .input-field {
