@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+
+:root {
+  --font: "Rock Salt", cursive;
+  --color-primary: hsl(356, 82%, 68%);
+  --color-secondary: hsl(232, 23%, 32%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: 1.6;
+}
+
+body {
+  background-color: var(--color-secondary);
+  height: 100%;
+  margin: 5rem 5rem;
+  display: grid;
+  grid-template-areas: "form" "output";
+}
+
+.form {
+  grid-area: form;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+}
+
+.input-label {
+  font-size: 1.6rem;
+  transform: translate(0, 0);
+}
+
+.input-placeholder {
+  font-family: var(--font);
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  flex-basis: 100%;
+  transform: translate(3rem, 6.5rem);
+  pointer-events: none;
+  transition: all 0.6s;
+}
+
+.input-label,
+.form:focus-within .input-placeholder {
+  font-size: 1.6rem;
+  transform: translate(0, 0);
+}
+
+.input-field {
+  background: transparent;
+  border: 0.15rem solid var(--color-primary);
+  padding: 2rem 3rem;
+  outline: none;
+  font-family: var(--font);
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  flex: 1 1 70%;
+  box-sizing: border-box;
+}
+
+.input-field::placeholder {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.8rem;
+  white-space: nowrap;
+  color: var(--color-primary);
+  background: transparent;
+  border: 0.15rem solid var(--color-primary);
+  outline: none;
+  font-family: var(--font);
+  flex: 1 1 30%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-primary);
+  color: whitesmoke;
+}
+
+.output {
+  grid-area: output;
+}
