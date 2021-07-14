@@ -77,12 +77,19 @@ body {
   flex: 1 1 30%;
   box-sizing: border-box;
   cursor: pointer;
+  transition: border-width 0.2s, box-shadow 0.1s 0.1s;
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus-visible {
   background-color: var(--color-primary);
   color: whitesmoke;
+}
+
+.btn:active {
+  border-width: 0.4rem;
+  box-shadow: 0 0 0 0.4rem var(--color-secondary) inset;
+  transition: all 0s;
 }
 
 .output {
