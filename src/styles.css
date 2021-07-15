@@ -173,6 +173,7 @@ body {
 
 .abilityContainer {
   display: grid;
+  grid-template-columns: auto auto 1fr;
   grid-template-areas: "abilityIcon abilityTitle abilityDescription";
   gap: 1rem;
 }
